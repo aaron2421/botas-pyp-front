@@ -1,4 +1,6 @@
 footer{
-    background-color: lightgray;
+    /* background-color: rgba(253, 231, 36, 75%); */
+    background-color: #A06932;
+    color: white;
     padding: 20px 0px 20px 120px;
 }

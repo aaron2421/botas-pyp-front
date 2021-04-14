@@ -7,6 +7,7 @@ a {
   background-image: url("../../assets/images/background-menu.jpg");
   background-position: center;
   height: 500px;
+  margin-top: 100px;
 }
 
 .header {
@@ -14,25 +15,32 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
+  margin-top: -100px;
 }
 
 .btn-ingreso {
   background: rgba(0, 0, 0, 0);
-  border: 1px solid #77472b;
-  color: #77472b;
+  border: 1px solid gray;
+  color: gray;
   font-family: "Noto Sans" !important;
   font-size: 16px;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 5px 20px 5px 20px;
   cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.btn-ingreso:hover{
+  border: 1px solid black;
+  color: black;
 }
 
 .about {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.63);
+  background-color: rgba(0, 0, 0, 0.600);
   margin-top: -500px;
   height: 500px;
 }
@@ -43,20 +51,22 @@ a {
   font-size: 56px;
   font-weight: 600;
   margin-bottom: 20px;
-  opacity: 100% !important;
+  /* opacity: 100% !important; */
+  color: white;
 }
 
 .about-info {
   display: flex;
   justify-content: center;
   text-align: center;
+  color: white;
 }
 
 .mision-img {
   display: flex;
   justify-content: center;
   /* margin-top: -500px; */
-  height: 531px;
+  height: 450px;
 }
 
 .mision {
@@ -65,21 +75,21 @@ a {
   flex-direction: column;
   /* background-color: #77472B; */
   /* color: white; */
-  margin-top: -500px;
-  padding-left: 120px;
-  height: 500px;
+  margin-top: -450px;
+  /* padding-left: 120px; */
+  height: 450px;
 }
 
-.m-bg {
+/* .m-bg {
   background-color: rgba(255, 255, 255, 0.822);
   border-radius: 10px;
   padding: 20px;
   width: 500px;
-}
+} */
 
 .mision-title {
   font-size: 48px;
-  /* font-weight: 600; */
+  font-weight: 600;
   padding-left: 20px;
   margin-bottom: 15px;
 }
@@ -89,10 +99,17 @@ a {
   padding-bottom: 15px;
 }
 
+.img-carousel img{
+  /* width: auto; */
+  height: 450px;
+  object-fit: cover;
+}
+
 .bottom {
   display: flex;
   padding: 80px 120px 20px 120px;
   height: auto;
+  background-color: #f3f3f3;
 }
 
 .info-sucursales > p {
@@ -133,8 +150,17 @@ a {
 }
 
 .btn-modal {
-  background-color: #77472b;
+  border: none;
+  /* background-color: #C4622D; */
+  background-color: #841317;
+  border-radius: 50px;
   color: white;
   margin-top: 35px;
   padding: 5px;
+  width: 200px;
+  margin-left: 30px;
+}
+
+.btn-modal:hover{
+  background-color: #641114;
 }

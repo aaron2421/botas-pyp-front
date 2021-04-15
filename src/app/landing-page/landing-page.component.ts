@@ -14,14 +14,6 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setUsername(event: Event){
-    this.username = (<HTMLInputElement>event.target).value;
-  }
-
-  setPswd(event: Event){
-    this.pswd = (<HTMLInputElement>event.target).value;
-  }
-
   iniciarSesion(){
     if (this.username === 'Aaron' && this.pswd === '12345') {
       alert('sesion iniciada');

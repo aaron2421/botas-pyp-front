@@ -193,6 +193,7 @@
                 placeholder="Usuario"
                 aria-label="Usuario"
                 aria-describedby="basic-addon1"
+                (input)='setUsername($event)'
               />
             </div>
             <!-- Pass -->
@@ -208,9 +209,10 @@
                 placeholder="Contraseña"
                 aria-label="Contraseña"
                 aria-describedby="basic-addon1"
+                (input)='setPswd($event)'
               />
             </div>
-            <button class="btn-modal">Iniciar sesión</button>
+            <button class="btn-modal" (click)='iniciarSesion()'>Iniciar sesión</button>
           </div>
           <div class="logo">
             <img

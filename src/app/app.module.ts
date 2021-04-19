@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavbarComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +23,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [LandingPageComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

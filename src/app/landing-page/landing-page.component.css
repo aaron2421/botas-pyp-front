@@ -15,7 +15,7 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin-top: -100px;
+  margin-top: -105px;
 }
 
 .btn-ingreso {
@@ -32,8 +32,8 @@ a {
 }
 
 .btn-ingreso:hover{
-  border: 1px solid black;
-  color: black;
+  border: 1px solid #A06932;
+  color: #A06932;
 }
 
 .about {
@@ -107,7 +107,7 @@ a {
 
 .bottom {
   display: flex;
-  padding: 80px 120px 20px 120px;
+  padding: 40px 120px 20px 120px;
   height: auto;
   background-color: #f3f3f3;
 }

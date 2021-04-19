@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MenuComponent } from './menu/menu.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: LandingPageComponent},
+  {path: 'menu', component: MenuComponent},
+  {path: 'navbar', component: NavbarComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

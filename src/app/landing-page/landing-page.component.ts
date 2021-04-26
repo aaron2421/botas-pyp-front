@@ -1,27 +1,36 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
+import { environment } from './../../environments/environment';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
-  username: string = "";
-  pswd: string = "";
+  SIGN_IN_URL = `${environment.apiEndpoint}/auth/login`;
 
-  constructor() { }
+  username: string = '';
+  pswd: string = '';
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {}
+
+  iniciarSesion() {
+    this.http
+      .post(this.SIGN_IN_URL, {
+        email: this.username,
+        password: this.pswd,
+      })
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+        },
+        error: (error: any) => {
+          console.log(error.error.msg);
+        },
+      });
   }
-
-  iniciarSesion(){
-    if (this.username === 'Aaron' && this.pswd === '12345') {
-      alert('sesion iniciada');
-    } else if (this.username === ""  && this.pswd === ""){
-      alert('los campos no pueden estar vacios');
-    } else {
-      alert('Te equivocaste');
-    }
-  }
-
 }

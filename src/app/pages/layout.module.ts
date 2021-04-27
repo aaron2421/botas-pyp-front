@@ -37,8 +37,7 @@ import { HeaderMenuDynamicComponent } from './_layout/components/header/header-m
     HeaderMenuDynamicComponent,
   ],
   imports: [
-    CommonModule,
-    PagesRoutingModule,
+    CommonModule,PagesRoutingModule,
     TranslationModule,
     InlineSVGModule,
     ExtrasModule,
@@ -46,6 +45,6 @@ import { HeaderMenuDynamicComponent } from './_layout/components/header/header-m
     NgbProgressbarModule,
     CoreModule,
     SubheaderModule,
-  ],
+  ]
 })
 export class LayoutModule { }

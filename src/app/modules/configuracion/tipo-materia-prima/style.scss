@@ -1,0 +1,22 @@
+.extender{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.extender > form {
+    width: 20%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.extender > form > input {
+    height: 32px;
+    padding-left: 30px;
+}
+
+.extender > form > svg {
+    position: absolute;
+    margin-left: 5px;
+}

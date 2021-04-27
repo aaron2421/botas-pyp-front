@@ -1,0 +1,170 @@
+<h2>Materias primas</h2>
+<br>
+<div class="card card-custom" [ngClass]="cssClass">
+    <!-- Header -->
+    <div class="card-header border-0 py-5">
+      <div class="card-toolbar extender">
+        <form>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                    <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                    <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+            <input type="text" class="form-control form-control-solid " name="search" value="" placeholder="Search" data-kt-search-element="input">
+        </form>
+        <a (click)="openLarge(content6)" data-toggle="modal" data-target="#content6" class="btn btn-success font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;">
+          Nuevo
+        </a>
+      </div>
+    </div>
+    <!--begin::Body-->
+    <div class="card-body py-0">
+      <!--begin::Table-->
+      <div class="table-responsive">
+        <table
+          class="table table-head-custom table-vertical-center"
+          id="kt_advance_table_widget_1"
+        >
+          <thead>
+            <tr class="text-left">
+              <th style="min-width: 100px">Acciones</th>
+              <th style="min-width: 100px">Nombre</th>
+              <th style="min-width: 100px">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="text-left">
+                <a
+                  (click)="openLarge(content7)"
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
+                >
+                  <span
+                    [inlineSVG]="
+                      './assets/media/svg/icons/Communication/Write.svg'
+                    "
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+                <a
+                  (click)="openLarge(content8)"
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm"
+                >
+                  <span
+                    [inlineSVG]="'./assets/media/svg/icons/General/Trash.svg'"
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+              </td>
+              <td>
+                <a
+                  class="text-dark-75 font-weight-bolder mb-1 font-size-lg"
+                  >Brad Simmons</a
+                >
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+            </tr>
+            <!-- Finish row 1 -->
+          </tbody>
+        </table>
+      </div>
+      <!--end::Table-->
+      <!-- Begin modal Crear materia prima -->
+      <div class="example-preview">
+        <div>
+          <ng-template #content6 let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title">Crear materia prima</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Nombre: </h5>
+              <input id="" type="text">
+              <br><br>
+              <h5>Estado:</h5>
+              <select id="" style="padding: 2px 20px 2px 10px;">
+                <option></option>
+                <option value="1">Estado 1</option>
+                <option value="2">Estado 2</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="guardar()">Agregar </button>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <!-- End modal Crear materia prima-->
+      <!-- Begin modal Editar -->
+      <div class="example-preview">
+        <div>
+          <ng-template #content7 let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title">Editar materia prima</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Nombre: </h5>
+              <input id="" type="text">
+              <br><br>
+              <h5>Estado:</h5>
+              <select id="" style="padding: 2px 20px 2px 10px;">
+                <option></option>
+                <option value="1">Estado 1</option>
+                <option value="2">Estado 2</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="editar()">Guardar</button>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <!-- End modal Editar-->
+      <!-- Begin modal Eliminar -->
+      <div class="example-preview">
+        <div>
+          <ng-template #content8 let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title">Eliminar materia prima</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Nombre: </h5>
+              <input id="" type="text" disabled>
+              <br><br>
+              <h5>Estado:</h5>
+              <select id="" style="padding: 2px 20px 2px 10px;" disabled>
+                <option></option>
+                <option value="1">Estado 1</option>
+                <option value="2">Estado 2</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="c('Close click')">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="eliminar()">Eliminar</button>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <!-- End modal Eliminar-->
+    </div>
+    <!--end::Body-->
+</div>

@@ -1,0 +1,324 @@
+<h2>Usuarios</h2>
+<br>
+<!-- Body default usuarios -->
+<div id="defUsuarios" class="card card-custom" [ngClass]="cssClass">
+    <!-- Header -->
+    <div class="card-header border-0 py-5">
+      <div class="card-toolbar extender">
+        <form>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <rect x="0" y="0" width="24" height="24"></rect>
+                    <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                    <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"></path>
+                </g>
+            </svg>
+            <input type="text" class="form-control form-control-solid " name="search" value="" placeholder="Search" data-kt-search-element="input">
+        </form>
+        <a (click)="toggleCreate()" class="btn btn-success font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;">
+          Nuevo
+        </a>
+      </div>
+    </div>
+    <!--begin::Body-->
+    <div class="card-body py-0">
+      <!--begin::Table-->
+      <div class="table-responsive">
+        <table
+          class="table table-head-custom table-vertical-center"
+          id="kt_advance_table_widget_1"
+        >
+          <thead>
+            <tr class="text-left">
+              <th style="min-width: 100px">Acciones</th>
+              <th style="min-width: 100px">Usuario</th>
+              <th style="min-width: 100px">Rol</th>
+              <th style="min-width: 100px">Plaza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="text-left">
+                <a
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
+                  (click)="toggleEdit()"
+                >
+                  <span
+                    [inlineSVG]="
+                      './assets/media/svg/icons/Communication/Write.svg'
+                    "
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+                <a
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm"
+                  (click)="eliminar()"
+                >
+                  <span
+                    [inlineSVG]="'./assets/media/svg/icons/General/Trash.svg'"
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+              </td>
+              <td>
+                <a
+                  class="text-dark-75 font-weight-bolder mb-1 font-size-lg"
+                  >Brad Simmons</a
+                >
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+            </tr>
+            <!-- Finish row 1 -->
+          </tbody>
+        </table>
+      </div>
+      <!--end::Table-->
+      
+      <!-- Begin modal -->
+      <div class="example-preview">
+        <div>
+          <ng-template #content6 let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title">Modal title</h4>
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+              <button type="button" class="btn btn-primary" (click)="guardar()">Save changes</button>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <!-- End modal -->
+    </div>
+    <!--end::Body-->
+</div>
+
+<!-- Crear usuario -->
+<div id="createUser" style="display: none;">
+  <mat-card>
+    <div class="extender" style="padding: 10px;">
+      <a class="btn font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;" (click)="cancelCreate()">
+        Cancelar
+      </a>
+      <a class="btn btn-success font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;" (click)="guardar()">
+        Guardar
+      </a>
+    </div>
+    <mat-card-content id="pruebaa">
+      <mat-tab-group class="demo-tab-group">
+        <!-- Primera pestaña -->
+        <mat-tab label="Datos generales">
+          <div class="demo-tab-content">
+            <!-- Parte 1 form -->
+            <div class="pt1" style="display: flex;">
+              <div>
+                <h5>Nombre</h5>
+                <input id="nombre" type="text" >
+              </div>
+              <div>
+                <h5>Apellido</h5>
+                <input id="apellido" type="text" >
+              </div>
+              <div>
+                <h5>Correo electrónico</h5>
+                <input id="correo" type="email" >
+              </div>
+              <div>
+                <h5>Celular</h5>
+                <input id="celular" type="number">
+              </div>
+            </div>
+            <!-- Fin pt1 -->
+            <!-- Parte 2 form -->
+            <div class="pt2" style="display: flex; margin-top: 20px">
+              <div>
+                <h5>Rol</h5>
+                <select id="rol" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                  <option></option>
+                  <option value="1">Rol 1</option>
+                  <option value="2">Rol 2</option>
+                </select>
+              </div>
+              <div>
+                <h5>Plaza</h5>
+                <select id="plaza" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                  <option></option>
+                  <option value="1">Plaza 1</option>
+                  <option value="2">Plaza 2</option>
+                </select>
+              </div>
+              <div>
+                <h5>Estatus</h5>
+                <select id="estatus" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                  <option></option>
+                  <option value="1">Estatus 1</option>
+                  <option value="2">Estatus 2</option>
+                </select>
+              </div>
+            </div>
+            <!-- Fin pt2 -->
+            <!-- Parte 3 form -->
+            <div class="pt3" style="display: flex; margin-top: 20px">
+              <div>
+                <h5>Nombre de usuario</h5>
+                <input id="username" type="text" >
+              </div>
+              <div>
+                <h5>Contraseña</h5>
+                <input id="contra" type="text" >
+              </div>
+              <div>
+                <h5>Confirmar contraseña</h5>
+                <input id="confirm_contra" type="text" >
+              </div>
+            </div>
+            <!-- Fin pt3 -->
+          </div>
+        </mat-tab>
+        <!-- Segunda pestaña -->
+      <mat-tab label="Procesos">
+        <div class="demo-tab-content">
+          <p>Asignación de procesos por empleado y pago por destajo</p>
+          <div id="procesos"></div>
+          <button class="btn btn-success" style="margin: 1% 0% 0% 5%; padding: 5px 50px 5px 50px;" (click)="agregarProceso()">Agregar</button>
+        </div>
+      </mat-tab>
+      <!-- Tercera pestaña -->
+      <mat-tab label="Comisiones">
+        <div class="demo-tab-content">
+          <p>Asignación de comisiones por empleado</p>
+          <div id="comisiones"></div>
+          <button class="btn btn-success" style="margin: 1% 0% 0% 5%; padding: 5px 50px 5px 50px;" (click)="agregarComision()">Agregar</button>
+        </div>
+      </mat-tab>
+      </mat-tab-group>
+    </mat-card-content> 
+  </mat-card>
+  </div>
+
+<!-- Editar usuario -->
+<div id="editUser" style="display: none;">
+<mat-card>
+  <div class="extender" style="padding: 10px;">
+    <a class="btn font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;" (click)="cancelEdit()">
+      Cancelar
+    </a>
+    <a class="btn btn-success font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;" (click)="guardar()">
+      Guardar
+    </a>
+  </div>
+  <mat-card-content id="pruebaa">
+    <mat-tab-group class="demo-tab-group">
+      <!-- Primera pestaña -->
+      <mat-tab label="Datos generales">
+        <div class="demo-tab-content">
+          <!-- Parte 1 form -->
+          <div class="pt1" style="display: flex;">
+            <div>
+              <h5>Nombre</h5>
+              <input id="editNombre" type="text" >
+            </div>
+            <div>
+              <h5>Apellido</h5>
+              <input id="editApellido" type="text" >
+            </div>
+            <div>
+              <h5>Correo electrónico</h5>
+              <input id="editCorreo" type="email" >
+            </div>
+            <div>
+              <h5>Celular</h5>
+              <input id="editCelular" type="number">
+            </div>
+          </div>
+          <!-- Fin pt1 -->
+          <!-- Parte 2 form -->
+          <div id="pt2" class="pt2" style="display: flex; margin-top: 20px">
+            <div>
+              <h5>Rol</h5>
+              <select id="editRol" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                <option></option>
+                <option value="1">Rol 1</option>
+                <option value="2">Rol 2</option>
+              </select>
+            </div>
+            <div>
+              <h5>Plaza</h5>
+              <select id="editPlaza" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                <option></option>
+                <option value="1">Plaza 1</option>
+                <option value="2">Plaza 2</option>
+              </select>
+            </div>
+            <div>
+              <h5>Estatus</h5>
+              <select id="editEstatus" class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+                <option></option>
+                <option value="1">Estatus 1</option>
+                <option value="2">Estatus 2</option>
+              </select>
+            </div>
+          </div>
+          <!-- Fin pt2 -->
+          <!-- Parte 3 form -->
+          <div class="pt3" style="display: flex; margin-top: 20px">
+            <div>
+              <h5>Nombre de usuario</h5>
+              <input id="editUsername" type="text" >
+            </div>
+            <div>
+              <h5>Contraseña</h5>
+              <input id="editContra" type="text" >
+            </div>
+            <div>
+              <h5>Confirmar contraseña</h5>
+              <input id="editConfirm_contra" type="text" >
+            </div>
+          </div>
+          <!-- Fin pt3 -->
+        </div>
+      </mat-tab>
+      <!-- Segunda pestaña -->
+      <mat-tab label="Procesos">
+        <div class="demo-tab-content">
+          <p>Asignación de procesos por empleado y pago por destajo</p>
+          <div id="editProcesos"></div>
+          <button class="btn btn-success" style="margin: 1% 0% 0% 5%; padding: 5px 50px 5px 50px;" (click)="agregarProcesoEdit()">Agregar</button>
+        </div>
+      </mat-tab>
+      <!-- Tercera pestaña -->
+      <mat-tab label="Comisiones">
+        <div class="demo-tab-content">
+          <p>Asignación de comisiones por empleado</p>
+          <div id="editComisiones"></div>
+          <button class="btn btn-success" style="margin: 1% 0% 0% 5%; padding: 5px 50px 5px 50px;" (click)="agregarComisionEdit()">Agregar</button>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content> 
+</mat-card>
+</div>

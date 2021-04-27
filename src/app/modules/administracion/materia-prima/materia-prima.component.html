@@ -1,0 +1,106 @@
+<h2>Materias primas</h2>
+<br>
+<div class="card card-custom" [ngClass]="cssClass">
+    <!-- Header -->
+    <div class="card-header border-0 py-5">
+      <h3 class="card-title align-items-start flex-column">
+        <span class="card-label font-weight-bolder text-dark" style="margin-bottom: 5px;">Estado</span>
+        <select class="form-select" aria-label="Select example" style="padding: 2px 20px 2px 10px; ">
+          <option></option>
+          <option value="1">Activo</option>
+          <option value="2">Inactivo</option>
+        </select>
+      </h3>
+      <div class="card-toolbar">
+        <a href="" class="btn btn-success font-weight-bolder font-size-sm" style="padding: 6px 20px 6px 20px;">
+          Nuevo
+        </a>
+      </div>
+    </div>
+    <!--begin::Body-->
+    <div class="card-body py-0">
+      <!--begin::Table-->
+      <div class="table-responsive">
+        <table
+          class="table table-head-custom table-vertical-center"
+          id="kt_advance_table_widget_1"
+        >
+          <thead>
+            <tr class="text-left">
+              <th style="min-width: 100px">Acciones</th>
+              <th style="min-width: 100px">Nombre</th>
+              <th style="min-width: 100px">Unidad</th>
+              <th style="min-width: 100px">Unidad por par</th>
+              <th style="min-width: 100px">Existencia</th>
+              <th style="min-width: 100px">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="text-left">
+                <a
+                  href="#"
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
+                >
+                  <span
+                    [inlineSVG]="
+                      './assets/media/svg/icons/Communication/Write.svg'
+                    "
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-icon btn-light btn-hover-primary btn-sm"
+                >
+                  <span
+                    [inlineSVG]="'./assets/media/svg/icons/General/Trash.svg'"
+                    class="svg-icon svg-icon-md svg-icon-primary"
+                  ></span>
+                </a>
+              </td>
+              <td>
+                <a
+                  href="#"
+                  class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
+                  >Brad Simmons</a
+                >
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+              <td>
+                <span
+                  class="text-dark-75 font-weight-bolder d-block font-size-lg"
+                >
+                  Intertico
+                </span>
+              </td>
+            </tr>
+            <!-- Finish row 1 -->
+          </tbody>
+        </table>
+      </div>
+      <!--end::Table-->
+    </div>
+    <!--end::Body-->
+</div>
